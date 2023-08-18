@@ -2,7 +2,7 @@ import torch
 from torch import distributions
 
 """
-Codes for basic nested monte carlo with atomic proposal
+Codes for nested monte carlo with atomic priors
 """
 
 class APNMC():
