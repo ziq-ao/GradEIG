@@ -54,18 +54,18 @@ class ConditionalGaussian(nn.Module):
         return samples.view(batch_size, num_samples,-1)
 
 if __name__ == "__main__":
-    # 示例用法
+    # example
     input_dim = 5
     hidden_dim = 10
     
-    # 创建条件高斯分布模型
+    # construct conditional gaussian model
     model = ConditionalGaussian(input_dim, hidden_dim)
     
-    # 生成示例输入x
+    # generate inputs
     batch_size = 10000
     x = torch.randn(batch_size, input_dim)
     
-    # 从条件高斯分布中采样多个y值
+    # sample from model
     num_samples = 1
     samples = model.sample(num_samples, context=x)
     samples = samples.view(-1,1)
